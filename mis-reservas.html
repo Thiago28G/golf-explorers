@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golf Explorers | Mis reservas</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">GOLF EXPLORERS</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="mis-reservas.html">Mis reservas</a></li>
+                <li class="nav-item ms-3"><a class="btn btn-warning" href="destinos.html">Reservar</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+    <header class="mb-4">
+      <h1 class="fw-bold">Mis reservas</h1>
+      <p class="text-muted mb-0">
+        Acá podés ver la última reserva guardada en tu navegador (LocalStorage).
+      </p>
+    </header>
+
+    <section id="sinReservas" class="alert alert-warning d-none">
+      Todavía no tenés reservas guardadas. Volvé a <a href="destinos.html">Destinos</a> y confirmá una reserva.
+    </section>
+
+    <section id="contenedorReserva" class="row g-4"></section>
+
+    <!-- Acciones -->
+    <section class="mt-4 d-flex gap-2">
+      <button id="btnEliminarReserva" class="btn btn-outline-danger d-none">
+        Eliminar reserva guardada
+      </button>
+      <a href="destinos.html" class="btn btn-outline-dark">
+        Volver a destinos
+      </a>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">© 2026 Golf Explorers - Proyecto Final Aplicaciones Web I</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/storage.js"></script>
+</body>
+</html>

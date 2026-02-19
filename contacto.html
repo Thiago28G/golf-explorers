@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golf Explorers | Contacto</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">GOLF EXPLORERS</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="mis-reservas.html">Mis reservas</a></li>
+                <li class="nav-item ms-3"><a class="btn btn-warning" href="destinos.html">Reservar</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+    <header class="mb-4">
+      <h1 class="fw-bold">Contacto</h1>
+      <p class="text-muted mb-0">
+        Asesoría personalizada para experiencias de golf premium en Argentina y el mundo.
+      </p>
+    </header>
+
+    <section class="row g-4 align-items-start">
+      <!-- INFO EMPRESA -->
+      <article class="col-12 col-lg-5">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                <h2 class="h5 fw-bold mb-3">Golf Explorers Córdoba</h2>
+
+                <p class="mb-2 text-muted">
+                    Diseñamos experiencias de golf premium desde Córdoba hacia los mejores
+                    destinos nacionales e internacionales. Nos especializamos en viajes a medida
+                    para jugadores exigentes.
+                </p>
+
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                    <span class="fw-bold">Teléfono:</span> +54 351 482-9150
+                    </li>
+
+                    <li class="mb-2">
+                    <span class="fw-bold">Email:</span> contacto@golfexplorers.com.ar
+                    </li>
+
+                    <li class="mb-2">
+                    <span class="fw-bold">Dirección:</span> Av. Hipólito Yrigoyen 325, Nueva Córdoba, Córdoba Capital
+                    </li>
+
+                    <li class="mb-2">
+                    <span class="fw-bold">Horario:</span> Lunes a Viernes — 9:30 a 18:30
+                    </li>
+
+                    <li>
+                    <span class="fw-bold">WhatsApp:</span> +54 9 351 612-7743
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mt-4">
+                <div class="card-body">
+                <h2 class="h6 fw-bold mb-2">Atención personalizada</h2>
+                <p class="text-muted mb-0">
+                    Coordinamos salidas desde Córdoba y asesoramos sobre vuelos,
+                    hospedaje y tee times exclusivos. Respondemos en menos de 24 horas hábiles.
+                </p>
+                </div>
+            </div>
+        </article>
+
+
+      <!-- FORMULARIO -->
+      <article class="col-12 col-lg-7">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5 fw-bold mb-3">Enviar consulta</h2>
+
+            <form id="formContacto" novalidate>
+              <div class="mb-3">
+                <label for="nombreContacto" class="form-label">Nombre y apellido</label>
+                <input type="text" id="nombreContacto" class="form-control" placeholder="Ej: Thiago Gallego">
+                <div id="errorNombreContacto" class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="emailContacto" class="form-label">Email</label>
+                <input type="email" id="emailContacto" class="form-control" placeholder="Ej: thiago@email.com">
+                <div id="errorEmailContacto" class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="asuntoContacto" class="form-label">Asunto</label>
+                <select id="asuntoContacto" class="form-select">
+                  <option value="">Seleccioná una opción</option>
+                  <option value="paquete">Consulta por paquete</option>
+                  <option value="upgrades">Upgrades premium</option>
+                  <option value="corporativo">Viaje corporativo</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <div id="errorAsuntoContacto" class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-2">
+                <label for="mensajeContacto" class="form-label">Mensaje</label>
+                <textarea id="mensajeContacto" class="form-control" rows="5" placeholder="Contanos qué destino te interesa, cuántas personas viajan y fechas aproximadas."></textarea>
+                <div class="d-flex justify-content-between mt-1">
+                  <small id="contadorMensaje" class="text-muted">0 / 300</small>
+                  <small class="text-muted">Máx. 300 caracteres</small>
+                </div>
+                <div id="errorMensajeContacto" class="invalid-feedback"></div>
+              </div>
+
+              <div class="mt-4 d-flex gap-2">
+                <button id="btnEnviarContacto" type="submit" class="btn btn-warning" disabled>
+                  Enviar
+                </button>
+                <button type="button" id="btnLimpiarContacto" class="btn btn-outline-dark">
+                  Limpiar
+                </button>
+              </div>
+
+              <div id="mensajeOkContacto" class="alert alert-success d-none mt-4 mb-0">
+                Consulta enviada correctamente. Te vamos a contactar a la brevedad.
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">© 2026 Golf Explorers - Proyecto Final Aplicaciones Web I</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/contacto.js"></script>
+</body>
+</html>

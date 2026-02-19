@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Destino | Golf Explorers</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Archivo CSS propio -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">GOLF EXPLORERS</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="mis-reservas.html">Mis reservas</a></li>
+                <li class="nav-item ms-3"><a class="btn btn-warning" href="destinos.html">Reservar</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main class="container py-5">
+
+        <section class="row g-4 align-items-start">
+
+            <!-- Imagen del destino -->
+            <article class="col-12 col-lg-7">
+                <img id="destinoImagen"
+                     src=""
+                     class="img-fluid rounded-3 shadow-sm"
+                     alt="Imagen del destino">
+            </article>
+
+            <!-- Información del destino -->
+            <article class="col-12 col-lg-5">
+
+                <span id="destinoTipo" class="etiqueta-destino"></span>
+
+                <h1 id="destinoNombre" class="mt-3 fw-bold"></h1>
+
+                <p id="destinoDescripcion" class="text-muted"></p>
+
+                <div class="bg-white rounded-3 p-4 shadow-sm">
+                    <h2 class="h5 fw-bold">Incluye (paquete base)</h2>
+                    <ul id="destinoIncluye" class="mb-3"></ul>
+
+                    <p class="mb-2">
+                        <span class="fw-bold">Mejor época:</span>
+                        <span id="destinoMejorEpoca"></span>
+                    </p>
+
+                    <div class="precio-destino mt-3 mb-4">
+                        <span class="precio-label">Desde</span>
+                        <span id="destinoPrecio" class="precio-valor"></span>
+                    </div>
+
+                    <a id="btnReservar" href="#" class="btn btn-warning w-100">
+                        Reservar este destino
+                    </a>
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- Mensaje de error si el ID no existe -->
+        <section id="mensajeError" class="d-none mt-5">
+            <div class="alert alert-danger">
+                No se encontró el destino solicitado. 
+                Volvé a <a href="destinos.html">Destinos</a>.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">
+            © 2026 Golf Explorers - Proyecto Final Aplicaciones Web I
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts del proyecto -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

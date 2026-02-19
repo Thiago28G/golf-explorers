@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golf Explorers | Destinos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <!-- Navbar unificado -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">GOLF EXPLORERS</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="destinos.html">Destinos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="mis-reservas.html">Mis reservas</a></li>
+            <li class="nav-item ms-3"><a class="btn btn-warning" href="destinos.html">Reservar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+    <header class="mb-4">
+      <h1 class="fw-bold">Destinos</h1>
+      <p class="text-muted mb-0">
+        Explorá experiencias premium. Filtrá por tipo o buscá por nombre.
+      </p>
+    </header>
+
+    <!-- Controles -->
+    <section class="row g-3 align-items-end mb-4">
+      <article class="col-12 col-lg-4">
+        <label for="busquedaDestino" class="form-label">Buscar destino</label>
+        <input id="busquedaDestino" type="text" class="form-control" placeholder="Ej: Bariloche, Algarve, St Andrews...">
+      </article>
+
+      <article class="col-12 col-lg-4">
+        <label for="filtroTipo" class="form-label">Filtrar por tipo</label>
+        <select id="filtroTipo" class="form-select">
+          <option value="todos">Todos</option>
+          <option value="nacional">Nacional</option>
+          <option value="internacional">Internacional</option>
+        </select>
+      </article>
+
+      <article class="col-12 col-lg-4 d-flex gap-2">
+        <button id="btnLimpiarFiltros" class="btn btn-outline-dark w-100">
+          Limpiar filtros
+        </button>
+      </article>
+    </section>
+
+    <!-- Resultado -->
+    <section id="mensajeSinResultados" class="alert alert-warning d-none">
+      No se encontraron destinos con esos criterios. Probá con otra búsqueda.
+    </section>
+
+    <!-- Grid de cards -->
+    <section class="row g-4" id="contenedorDestinos"></section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">© 2026 Golf Explorers - Proyecto Final Aplicaciones Web I</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- data.js debe cargarse antes porque define DESTINOS -->
+  <script src="js/data.js"></script>
+  <script src="js/destinos.js"></script>
+</body>
+</html>

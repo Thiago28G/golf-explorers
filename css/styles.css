@@ -1,0 +1,108 @@
+.hero {
+    height: 85vh;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('../assets/img/hero.png');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-img-top{
+  height: 220px;
+  object-fit: cover; 
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body a.btn{
+  margin-top: auto;
+}
+
+.etiqueta-destino{
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.65); 
+  backdrop-filter: blur(6px);
+}
+
+.etiqueta-nacional{
+  color: #0E6F7A;
+  border-color: rgba(14,111,122,0.35);
+}
+
+.etiqueta-internacional{
+  color: #B8892C;
+  border-color: rgba(184,137,44,0.35);
+  }
+
+  body{
+  background-color: #f4f1ec;
+}
+
+.card{
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+#destinoImagen{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px){
+    #destinoImagen{
+        height: 300px;
+    }
+}
+
+.precio-destino{
+    display: flex;
+    flex-direction: column;
+}
+
+.precio-label{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6c757d;
+}
+
+.precio-valor{
+    font-size: 32px;
+    font-weight: 700;
+    color: #b8892c; 
+}
+
+.precio-destino{
+    margin-top: 20px;
+}
+
+.precio-valor{
+    line-height: 1.1;
+}
+
+.bg-white{
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.img-card-destino {
+  height: 220px;
+  object-fit: cover;
+}

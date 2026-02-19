@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Explorers | Viajes de Golf Premium</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+
+        <!-- Navbar responsive de Bootstrap -->
+        <!-- Uso clases del framework -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">GOLF EXPLORERS</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="mis-reservas.html">Mis reservas</a></li>
+                <li class="nav-item ms-3"><a class="btn btn-warning" href="destinos.html">Reservar</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <!-- main contiene el contenido principal del sitio -->
+    <main>
+        <!-- Sección Hero  -->
+        <section class="hero d-flex align-items-center">
+
+            <div class="container text-center text-white">
+
+                <h1 class="display-3 fw-bold">
+                    Viajes de Golf Premium
+                </h1>
+
+                <p class="lead mt-3">
+                    Experiencias diseñadas para verdaderos amantes del golf.
+                </p>
+
+                <!-- Botones principales -->
+                <div class="mt-4">
+                    <a href="destinos.html" class="btn btn-warning btn-lg me-3">
+                        Explorar Destinos
+                    </a>
+
+                    <a href="destinos.html" class="btn btn-outline-light btn-lg">
+                        Reservar Ahora
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= DESTINOS NACIONALES ================= -->
+        <section class="container pt-5 pb-3">
+            <header class="mb-4">
+                <h2 class="fw-bold">Colección Argentina</h2>
+                <p class="text-muted mb-0">
+                    Escapadas premium en los fairways más icónicos del país.
+                </p>
+            </header>
+
+            <!-- Grid de Bootstrap (responsive) -->
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <article class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/bariloche.png" class="card-img-top" alt="Bariloche">
+                        <div class="card-body">
+                            <span class="etiqueta-destino etiqueta-nacional">Nacional</span>
+                            <h3 class="h5 mt-2">Patagonia Elite — Bariloche</h3>
+                            <p class="text-muted mb-3">Golf con lagos y montañas. Patagonia en estado puro.</p>
+                            <a href="destino.html?id=1" class="btn btn-outline-dark w-100">Ver experiencia</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/pilar.png" class="card-img-top" alt="Pilar">
+                        <div class="card-body">
+                            <span class="etiqueta-destino etiqueta-nacional">Nacional</span>
+                            <h3 class="h5 mt-2">Buenos Aires Premium — Pilar</h3>
+                            <p class="text-muted mb-3">Escapada urbana premium cerca de la ciudad.</p>
+                            <a href="destino.html?id=2" class="btn btn-outline-dark w-100">Ver experiencia</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/mendoza.png" class="card-img-top" alt="Mendoza">
+                        <div class="card-body">
+                            <span class="etiqueta-destino etiqueta-nacional">Nacional</span>
+                            <h3 class="h5 mt-2">Golf & Wine — Mendoza</h3>
+                            <p class="text-muted mb-3">Golf de día, vinos de noche. Experiencia boutique.</p>
+                            <a href="destino.html?id=3" class="btn btn-outline-dark w-100">Ver experiencia</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ================= DESTINOS INTERNACIONALES ================= -->
+        <section class="container pt-5 pb-3">
+            <header class="mb-4">
+                <h2 class="fw-bold">Firma Internacional</h2>
+                <p class="text-muted mb-0">
+                    Destinos legendarios para golfistas que buscan excelencia.
+                </p>
+            </header>
+
+            <div class="row g-4">
+
+            <!-- Card 4 -->
+            <article class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img src="assets/img/standrews.png" class="card-img-top" alt="St Andrews">
+                    <div class="card-body">
+                        <span class="etiqueta-destino etiqueta-internacional">Internacional</span>
+                        <h3 class="h5 mt-2">St Andrews — Escocia</h3>
+                        <p class="text-muted mb-3">La cuna del golf. Historia y tradición en estado puro.</p>
+                        <a href="destino.html?id=4" class="btn btn-outline-dark w-100">Ver experiencia</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="assets/img/algarve.png" class="card-img-top" alt="Algarve">
+                    <div class="card-body">
+                        <span class="etiqueta-destino etiqueta-internacional">Internacional</span>
+                        <h3 class="h5 mt-2">Algarve — Portugal</h3>
+                        <p class="text-muted mb-3">Resorts, sol y golf europeo de lujo.</p>
+                        <a href="destino.html?id=5" class="btn btn-outline-dark w-100">Ver experiencia</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/pebble.png" class="card-img-top" alt="Pebble Beach">
+                        <div class="card-body">
+                            <span class="etiqueta-destino etiqueta-internacional">Internacional</span>
+                            <h3 class="h5 mt-2">Pebble Beach — California</h3>
+                            <p class="text-muted mb-3">Ícono mundial: golf sobre el Pacífico.</p>
+                            <a href="destino.html?id=6" class="btn btn-outline-dark w-100">Ver experiencia</a>
+                        </div>
+                    </div>
+            </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">
+            © 2026 Golf Explorers - Proyecto Final Aplicaciones Web I
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
