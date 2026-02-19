@@ -1,9 +1,14 @@
 # Golf Explorers – Plataforma Web Turística
 
+**Versión:** 1.0.0 (SemVer)
+
 Este proyecto es mi trabajo final de la materia **Aplicaciones Web I**.  
 Desarrollé una plataforma web ficticia llamada **Golf Explorers**, una agencia especializada en **paquetes turísticos de golf** nacionales e internacionales.
 
 El objetivo principal es integrar los contenidos vistos en la cursada: **HTML5 semántico, CSS, Bootstrap, JavaScript, DOM, validaciones, cálculos dinámicos, uso de Storage, Git/GitHub y deploy**.
+
+- **Repositorio:** [github.com/Thiago28G/golf-explorers](https://github.com/Thiago28G/golf-explorers)
+- **Sitio en vivo:** [golf-explorers.vercel.app](https://golf-explorers.vercel.app)
 
 ---
 
@@ -47,8 +52,8 @@ El sitio permite:
   - Validaciones personalizadas
   - Cálculos dinámicos
   - LocalStorage
-- **Git & GitHub** para control de versiones
-- **Deploy** en _(completar: Netlify / Vercel / GitHub Pages)_  
+- **Git & GitHub** para control de versiones (SemVer para versionado)
+- **Deploy** en **Vercel**  
 
 ---
 
@@ -107,6 +112,8 @@ El sitio permite:
 - Al confirmar:
   - Se validan todos los campos con mensajes personalizados.
   - Se guarda la reserva en **LocalStorage** (`reservaGolfExplorers`).
+  - Se muestra un cartel de éxito con el botón **“Ver mi reserva”** que lleva a `mis-reservas.html`.
+  - El formulario se limpia y el botón vuelve a deshabilitarse hasta completar de nuevo nombre, email y fecha.
 
 ### Mis reservas (LocalStorage)
 
@@ -126,5 +133,40 @@ El sitio permite:
   - Usa los `invalid-feedback` para mostrar errores personalizados.
   - Habilita / deshabilita el botón **“Enviar”** según si el formulario es válido.
   - Muestra un mensaje de éxito al “enviar” (simulado en frontend).
+
+---
+
+## Cómo ejecutar el proyecto
+
+1. Clonar el repositorio:
+
+   ```bash
+   git clone https://github.com/Thiago28G/golf-explorers.git
+   ```
+
+2. Entrar a la carpeta del proyecto:
+
+   ```bash
+   cd golf-explorers
+   ```
+
+3. Abrir `index.html` en el navegador (o usar una extensión tipo **Live Server** en VS Code/Cursor para evitar problemas de CORS con archivos locales).
+
+---
+
+## Deploy
+
+El proyecto está publicado en **Vercel**. Cada push a la rama `main` en GitHub dispara un deploy automático.
+
+- **URL:** [https://golf-explorers.vercel.app](https://golf-explorers.vercel.app)
+
+La corrección del trabajo se hace sobre esta versión en producción.
+
+---
+
+## Autor
+
+- **Thiago Gallego** — *Proyecto final* — [Thiago28G](https://github.com/Thiago28G)  
+- Materia: Aplicaciones Web I
 
 ---
