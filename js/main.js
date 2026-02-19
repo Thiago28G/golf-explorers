@@ -112,6 +112,7 @@ function iniciarPaginaReserva() {
   const inputNoches = document.getElementById("noches");
   const selectHotel = document.getElementById("hotel");
   const inputRondas = document.getElementById("rondasExtra");
+  const btnConfirmar = document.getElementById("btnConfirmar");
 
   // 5) cargo datos base
   resumenDestino.textContent = destinoSeleccionado.nombre;
@@ -141,6 +142,32 @@ function iniciarPaginaReserva() {
     if (!input) return;
     input.classList.remove("is-invalid");
     if (contenedorError) contenedorError.textContent = "";
+  }
+
+  // Validación básica para habilitar/deshabilitar el botón de confirmar
+  function esFormularioBasicoValido() {
+    // Nombre
+    const nombre = (inputNombre?.value || "").trim();
+    const regexNombre = /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]{3,}$/;
+    if (!regexNombre.test(nombre)) return false;
+
+    // Email
+    const email = (inputEmail?.value || "").trim();
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regexEmail.test(email)) return false;
+
+    // Fecha (no vacía y no anterior a hoy)
+    const fecha = inputFecha?.value || "";
+    if (!fecha) return false;
+    const hoy = new Date().toISOString().split("T")[0];
+    if (fecha < hoy) return false;
+
+    return true;
+  }
+
+  function actualizarEstadoBotonConfirmar() {
+    if (!btnConfirmar) return;
+    btnConfirmar.disabled = !esFormularioBasicoValido();
   }
 
   function validarFormulario() {
@@ -254,12 +281,18 @@ function iniciarPaginaReserva() {
   inputRondas.addEventListener("input", actualizarResumen);
   selectHotel.addEventListener("change", actualizarResumen);
 
+  // Habilitar / deshabilitar botón de confirmar según nombre, email y fecha
+  inputNombre.addEventListener("input", actualizarEstadoBotonConfirmar);
+  inputEmail.addEventListener("input", actualizarEstadoBotonConfirmar);
+  inputFecha.addEventListener("input", actualizarEstadoBotonConfirmar);
+
   document.querySelectorAll(".upgrade").forEach(chk => {
     chk.addEventListener("change", actualizarResumen);
   });
 
   // 8) primera ejecución
   actualizarResumen();
+  actualizarEstadoBotonConfirmar();
 
   // ================= GUARDADO EN LOCALSTORAGE =================
 
@@ -306,6 +339,18 @@ function iniciarPaginaReserva() {
     if (mensajeOk) {
       mensajeOk.classList.remove("d-none");
     }
+
+    // limpio el formulario y actualizo el resumen
+    formReserva.reset();
+
+    // restauro valores por defecto esperados por los cálculos
+    inputPersonas.value = 1;
+    inputNoches.value = 5;
+    inputRondas.value = 0;
+    selectHotel.value = "standard";
+
+    actualizarResumen();
+    actualizarEstadoBotonConfirmar();
   });
 }
 
