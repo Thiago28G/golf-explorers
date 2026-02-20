@@ -150,7 +150,7 @@ El sitio permite:
    cd golf-explorers
    ```
 
-3. Abrir `index.html` en el navegador (o usar una extensión tipo **Live Server** en VS Code/Cursor para evitar problemas de CORS con archivos locales).
+3. Abrir `index.html` en el navegador (o usar una extensión tipo **Live Server** en VS Code para evitar problemas de CORS con archivos locales).
 
 ---
 
@@ -159,8 +159,6 @@ El sitio permite:
 El proyecto está publicado en **Vercel**. Cada push a la rama `main` en GitHub dispara un deploy automático.
 
 - **URL:** [https://golf-explorers.vercel.app](https://golf-explorers.vercel.app)
-
-La corrección del trabajo se hace sobre esta versión en producción.
 
 ---
 
